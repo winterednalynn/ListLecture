@@ -1,0 +1,69 @@
+﻿<Window x:Class="ListLecture.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListLecture"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,0,10,-6">
+        <Canvas Margin="197,5,0,5">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF0A2C52" Offset="1"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+            <RichTextBox Height="290" Width="266" RenderTransformOrigin="0.5,0.5" Canvas.Top="64" Canvas.Left="165" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <RichTextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.414"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </RichTextBox.RenderTransform>
+                <FlowDocument>
+                    <Paragraph>
+                        <Run x:Name="runDisplay" />
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+            <StackPanel x:Name="SPAddStudent" Height="430" Width="239" Canvas.Left="-197" Background="#FFE8098D" HorizontalAlignment="Center" VerticalAlignment="Top" Visibility="Hidden">
+                <Label Content="First Name"/>
+                <TextBox x:Name="txtFirstName" TextWrapping="Wrap" Width="120"/>
+                <Label Content="Last Name"/>
+                <TextBox x:Name="txtLastName" TextWrapping="Wrap" Width="120"/>
+                <Label Content="Grades"/>
+                <TextBox x:Name="txtGrade" TextWrapping="Wrap" Width="120"/>
+                <Button x:Name="btnAddStudent" Content="Add New Student" Click="btn_AddStudent_Click"/>
+                <Label Content="Insert At "/>
+                <TextBox x:Name="txtInsertAt" TextWrapping="Wrap" Width="120"/>
+                <Button x:Name="btnInsertAt" Content="Insert At" Click="btnInsertAt_Click"/>
+                <Label Content="Remove Student"/>
+                <TextBox x:Name="txtRemoveStudent" TextWrapping="Wrap" Width="120"/>
+                <Button x:Name="btnRemoveStudent" Content="Remove " Click="btnRemoveStudent_Click"/>
+                <Label Content="Remove At "/>
+                <TextBox x:Name="txtRemoveAt" TextWrapping="Wrap" Width="120"/>
+                <Button x:Name="btnRemoveAt" Content="Remove At" Click="btnRemoveAt_Click"/>
+            </StackPanel>
+            <Canvas Height="40" Width="551" Background="#FFFF00AF" Canvas.Left="42" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Button x:Name="btnAstudent" Content="Add Student" Canvas.Left="10" Canvas.Top="11" HorizontalAlignment="Left" VerticalAlignment="Center" Width="94" FontWeight="Bold" Visibility="Hidden"/>
+                <Button x:Name="btnInsertPanel" Content="Insert" Canvas.Left="126" Canvas.Top="11" Width="94" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnInsert_Click"/>
+                <Button x:Name="btnRemovePanel" Content="Remove" Canvas.Left="247" Canvas.Top="11" Width="94" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnRemovePanel_Click"/>
+                <Button x:Name="btnRemoveAtPanel" Content="Remove At" Canvas.Left="372" Canvas.Top="10" Width="94" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnRemoveAtPanel_Click"/>
+                <Button x:Name="btnAddStudentPanel" Content="Add Student" Canvas.Left="22" Canvas.Top="11" FontWeight="Bold" Click="btnAddStudentPanel_Click"/>
+            </Canvas>
+        </Canvas>
+        <StackPanel x:Name="SPInsert" Background="Black" Margin="0,0,578,0" Visibility="Hidden">
+            <TextBox x:Name="txtInsertAt_Copy" TextWrapping="Wrap" Width="120"/>
+            <Button x:Name="btnInsertAt_Copy" Content="Insert At" Click="btnInsertAt_Click"/>
+        </StackPanel>
+        <StackPanel x:Name="SP3_" Background="DarkOrange" Margin="0,0,578,4" Visibility="Hidden">
+            <Label Content="Remove At"/>
+            <TextBox x:Name="txtRemoveStudent_Copy" TextWrapping="Wrap" Width="120"/>
+            <Button x:Name="btnRemoveAtCopy" Content="Remove At" Click="btnRemoveStudent_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
